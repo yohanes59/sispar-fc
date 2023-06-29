@@ -106,4 +106,20 @@ class gejalaController
             }
         }
     }
+
+    public function destroy($kode)
+    {
+        $delete = $this->model->delete($kode);
+        if ($delete) {
+            echo "<script type='text/javascript'>
+                Swal.fire({
+                icon: 'success',
+                title: 'Data Terhapus',
+                text: 'Data berhasil dihapus!'
+                }).then(function() {
+                    location.href = '?page=home&sub=gejala';
+                });
+            </script>";
+        }
+    }
 }

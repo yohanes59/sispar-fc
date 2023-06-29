@@ -64,6 +64,8 @@ $user->guest();
                     if (@$_POST['simpan']) {
                         $gejala->update();
                     }
+                } elseif ($act == 'delete') {
+                    $gejala->destroy($kode);
                 }
             } elseif ($sub == DIAGNOSA_URL) {
                 include './views/pages/home/diagnosa/index.php';

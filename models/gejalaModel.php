@@ -46,4 +46,10 @@ class gejalaModel
 		$query = "UPDATE gejala SET nama='$nama' WHERE kode='$kode'";
 		return $this->execute($query);
 	}
+
+	public function delete($kode)
+	{
+		$query = "DELETE FROM gejala WHERE kode='$kode'";
+		return $this->execute($query);
+	}
 }

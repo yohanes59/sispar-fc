@@ -29,7 +29,8 @@
                             <i class="fa fa-edit"></i> Edit
                         </button>
                     </a>
-                    <a href="" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">
+
+                    <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=delete&kode=<?= $data_gejala['kode']; ?>" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">
                         <button class="btn">
                             <i class="fa fa-trash"></i> Hapus
                         </button>
@@ -42,3 +43,67 @@
         ?>
     </tbody>
 </table>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteButtons = document.querySelectorAll('.btn-delete');
+
+        deleteButtons.forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const kode = this.dataset.kode;
+
+                Swal.fire({
+                    title: 'Apakah anda yakin?',
+                    text: 'Anda tidak akan dapat mengembalikan ini!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Perform AJAX delete request
+                        ajaxDelete(kode);
+                    }
+                });
+            });
+        });
+
+        function ajaxDelete(kode) {
+            // Perform AJAX request to delete the data
+            // Update the URL and method according to your implementation
+            fetch(`?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=delete&kode=${kode}`, {
+                    method: 'GET',
+                })
+                .then(function(response) {
+                    if (response.ok) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Data Terhapus',
+                            text: 'Data berhasil dihapus!'
+                        }).then(function() {
+                            location.href = '?page=home&sub=gejala';
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Gagal Menghapus Data',
+                            text: 'Terjadi kesalahan saat menghapus data.'
+                        });
+                    }
+                })
+                .catch(function(error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal Menghapus Data',
+                        text: 'Terjadi kesalahan saat menghapus data.'
+                    });
+                });
+        }
+    });
+</script>
