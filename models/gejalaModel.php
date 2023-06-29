@@ -23,15 +23,15 @@ class gejalaModel
 		return $this->execute($query);
 	}
 
-	public function insert($nama)
+	public function selectAll()
 	{
-		$query = "INSERT INTO gejala(nama, created_at, updated_at) VALUES ('$nama', NOW(), NOW())";
+		$query = "SELECT * FROM gejala ORDER BY kode_gejala ASC";
 		return $this->execute($query);
 	}
 
-	// function select($username)
-	// {
-	// 	$query = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
-	// 	return $this->execute($query);
-	// }
+	public function insert($kode, $nama)
+	{
+		$query = "INSERT INTO gejala(kode_gejala, nama, created_at, updated_at) VALUES ('$kode', '$nama', NOW(), NOW())";
+		return $this->execute($query);
+	}
 }

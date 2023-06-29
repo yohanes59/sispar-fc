@@ -10,10 +10,21 @@ class gejalaController
         $this->model = new gejalaModel();
     }
 
-    // public function generate_code()
-    // {
-    //     $this->model->cariCode();
-    // }
+    public function generate_code()
+    {
+        $result = $this->model->cariCode();
+
+        if ($result == null) {
+            return 'KG-001';
+        } else {
+            $row = $result->fetch_array();
+            $lastCode = substr($row[0], 3);
+            $nextCode = intval($lastCode) + 1;
+
+            $nextCodeFormatted = sprintf('%03d', $nextCode);
+            return 'KG-' . $nextCodeFormatted;
+        }
+    }
 
     function sweetalert($icon, $title, $text)
     {
@@ -28,6 +39,7 @@ class gejalaController
 
     public function index()
     {
+        $data = $this->model->selectAll();
         include './views/pages/home/gejala/index.php';
     }
 
@@ -50,9 +62,10 @@ class gejalaController
     {
         include_once './views/pages/home/gejala/tambah.php';
         $nama = @$_POST['nama'];
+        $kode = $this->generate_code();
 
         if ($this->validate_name($nama)) {
-            $insert = $this->model->insert($nama);
+            $insert = $this->model->insert($kode, $nama);
             if ($insert) {
                 echo "<script type='text/javascript'>
                     Swal.fire({

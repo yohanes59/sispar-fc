@@ -15,22 +15,30 @@
     </thead>
     <tbody>
 
-        <tr>
-            <td data-label="No.">1</td>
-            <td data-label="Kode Gejala">KG-1</td>
-            <td data-label="Nama Gejala">Perubahan suara serta sulit atau rasa sakit saat menelan serta mengunyah</td>
-            <td data-label="Aksi" class="aksi">
-                <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=edit">
-                    <button class="btn">
-                        <i class="fa fa-edit"></i> Edit
-                    </button>
-                </a>
-                <a href="" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">
-                    <button class="btn">
-                        <i class="fa fa-trash"></i> Hapus
-                    </button>
-                </a>
-            </td>
-        </tr>
+        <?php
+        $no = 1;
+        while ($data_gejala = $this->model->fetch($data)) :
+        ?>
+            <tr>
+                <td data-label="No."><?= $no; ?></td>
+                <td data-label="Kode Gejala"><?= $data_gejala['kode_gejala']; ?></td>
+                <td data-label="Nama Gejala"><?= $data_gejala['nama']; ?></td>
+                <td data-label="Aksi" class="aksi">
+                    <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=edit">
+                        <button class="btn">
+                            <i class="fa fa-edit"></i> Edit
+                        </button>
+                    </a>
+                    <a href="" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">
+                        <button class="btn">
+                            <i class="fa fa-trash"></i> Hapus
+                        </button>
+                    </a>
+                </td>
+            </tr>
+        <?php
+            $no++;
+        endwhile;
+        ?>
     </tbody>
 </table>
