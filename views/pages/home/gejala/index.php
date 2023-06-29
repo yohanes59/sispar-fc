@@ -21,10 +21,10 @@
         ?>
             <tr>
                 <td data-label="No."><?= $no; ?></td>
-                <td data-label="Kode Gejala"><?= $data_gejala['kode_gejala']; ?></td>
+                <td data-label="Kode Gejala"><?= $data_gejala['kode']; ?></td>
                 <td data-label="Nama Gejala"><?= $data_gejala['nama']; ?></td>
                 <td data-label="Aksi" class="aksi">
-                    <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=edit">
+                    <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=edit&kode=<?= $data_gejala['kode']; ?>">
                         <button class="btn">
                             <i class="fa fa-edit"></i> Edit
                         </button>

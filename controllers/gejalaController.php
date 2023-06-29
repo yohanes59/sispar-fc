@@ -60,7 +60,6 @@ class gejalaController
 
     public function insert()
     {
-        include_once './views/pages/home/gejala/tambah.php';
         $nama = @$_POST['nama'];
         $kode = $this->generate_code();
 
@@ -80,8 +79,31 @@ class gejalaController
         }
     }
 
-    public function edit()
+    public function edit($kode)
     {
+        $data = $this->model->select($kode);
+        $item = $this->model->fetch($data);
         include './views/pages/home/gejala/edit.php';
+    }
+
+    public function update()
+    {
+        $kode = $_GET['kode'];
+        $nama = @$_POST['nama'];
+
+        if ($this->validate_name($nama)) {
+            $update = $this->model->update($kode, $nama);
+            if ($update) {
+                echo "<script type='text/javascript'>
+                    Swal.fire({
+                    icon: 'success',
+                    title: 'Data Tersimpan',
+                    text: 'Data berhasil diubah!'
+                    }).then(function() {
+                        location.href = '?page=home&sub=gejala';
+                    });
+                </script>";
+            }
+        }
     }
 }

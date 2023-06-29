@@ -15,14 +15,8 @@
         </div>
 
         <div class="row">
-            <button value="Simpan" name="tambah" class="btn-submit">Submit</button>
+            <button value="Simpan" name="simpan" class="btn-submit">Submit</button>
         </div>
 
-        <?php
-        if (@$_POST['tambah']) {
-            $main = new gejalaController();
-            $main->insert();
-        }
-        ?>
     </form>
 </div>

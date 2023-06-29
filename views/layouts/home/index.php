@@ -43,7 +43,7 @@ $user->guest();
             <?php
             $sub = @$_GET['sub'];
             $act = @$_GET['act'];
-            $id = @$_GET['id'];
+            $kode = @$_GET['kode'];
 
             if ($sub == '') {
                 if ($act == '') {
@@ -56,9 +56,13 @@ $user->guest();
                     $gejala->index();
                 } elseif ($act == 'tambah') {
                     $gejala->create();
+                    if (@$_POST['simpan']) {
+                        $gejala->insert();
+                    }
                 } elseif ($act == 'edit') {
-                    if ($id == '') {
-                        $gejala->edit();
+                    $gejala->edit($kode);
+                    if (@$_POST['simpan']) {
+                        $gejala->update();
                     }
                 }
             } elseif ($sub == DIAGNOSA_URL) {
