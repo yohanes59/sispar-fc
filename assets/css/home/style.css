@@ -1,0 +1,8 @@
+@import url(_partials/global.css);
+@import url(_partials/sidebar.css);
+@import url(_partials/navbar.css);
+@import url(_partials/content.css);
+@import url(_partials/footer.css);
+@import url(_partials/table.css);
+@import url(_partials/form.css);
+@import url(_partials/error.css);
