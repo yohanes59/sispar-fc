@@ -30,7 +30,7 @@
                         </button>
                     </a>
 
-                    <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=delete&kode=<?= $data_gejala['kode']; ?>" onclick="return confirm('Yakin Ingin Menghapus Data Ini?')">
+                    <a href="" onclick="confirmDeleteGejala(event, '<?= $data_gejala['kode']; ?>')">
                         <button class="btn">
                             <i class="fa fa-trash"></i> Hapus
                         </button>
@@ -44,66 +44,33 @@
     </tbody>
 </table>
 
-
-
-
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const deleteButtons = document.querySelectorAll('.btn-delete');
-
-        deleteButtons.forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const kode = this.dataset.kode;
+    // Function to append the script after </main>
+    function appendScript() {
+        let script = document.createElement('script');
+        script.innerHTML = `
+            function confirmDeleteGejala(event, kode) {
+                event.preventDefault();
 
                 Swal.fire({
-                    title: 'Apakah anda yakin?',
-                    text: 'Anda tidak akan dapat mengembalikan ini!',
+                    title: 'Konfirmasi',
+                    text: 'Yakin ingin menghapus data ini?',
                     icon: 'warning',
                     showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Ya'
+                    confirmButtonText: 'Ya, Hapus!',
+                    cancelButtonText: 'Batal'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        // Perform AJAX delete request
-                        ajaxDelete(kode);
+                        let deleteUrl = '?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=delete&kode=' + kode;
+                        window.location.href = deleteUrl;
                     }
                 });
-            });
-        });
+            }
+        `;
 
-        function ajaxDelete(kode) {
-            // Perform AJAX request to delete the data
-            // Update the URL and method according to your implementation
-            fetch(`?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=delete&kode=${kode}`, {
-                    method: 'GET',
-                })
-                .then(function(response) {
-                    if (response.ok) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Data Terhapus',
-                            text: 'Data berhasil dihapus!'
-                        }).then(function() {
-                            location.href = '?page=home&sub=gejala';
-                        });
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Gagal Menghapus Data',
-                            text: 'Terjadi kesalahan saat menghapus data.'
-                        });
-                    }
-                })
-                .catch(function(error) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Gagal Menghapus Data',
-                        text: 'Terjadi kesalahan saat menghapus data.'
-                    });
-                });
-        }
-    });
+        var mainElement = document.querySelector('main');
+        mainElement.parentNode.insertBefore(script, mainElement.nextSibling);
+    }
+
+    appendScript();
 </script>

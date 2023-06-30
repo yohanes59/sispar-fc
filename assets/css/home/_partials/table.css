@@ -70,7 +70,8 @@
 }
 
 @media(max-width: 1035px) {
-  .table td.aksi{
+  .table td.aksi {
     display: inline-flex !important;
   }
 }
+
