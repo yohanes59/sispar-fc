@@ -95,4 +95,10 @@
   .line {
     display: none !important;
   }
+
+  .table td,
+  .table th {
+    border: 1px solid #000;
+    color: #000;
+  }
 }

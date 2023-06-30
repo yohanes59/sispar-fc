@@ -4,9 +4,11 @@ session_start();
 include './database/koneksi.php';
 include './controllers/userController.php';
 include './controllers/gejalaController.php';
+include './controllers/kerusakanController.php';
 
 $user = new userController();
 $gejala = new gejalaController();
+$kerusakan = new kerusakanController();
 $user->guest();
 ?>
 <!DOCTYPE html>
@@ -66,6 +68,22 @@ $user->guest();
                     }
                 } elseif ($act == 'delete') {
                     $gejala->destroy($kode);
+                }
+            } elseif ($sub == KERUSAKAN_URL) {
+                if ($act == '') {
+                    $kerusakan->index();
+                } elseif ($act == 'tambah') {
+                    $kerusakan->create();
+                    if (@$_POST['simpan']) {
+                        $kerusakan->insert();
+                    }
+                } elseif ($act == 'edit') {
+                    $kerusakan->edit($kode);
+                    if (@$_POST['simpan']) {
+                        $kerusakan->update();
+                    }
+                } elseif ($act == 'delete') {
+                    $kerusakan->destroy($kode);
                 }
             } elseif ($sub == DIAGNOSA_URL) {
                 include './views/pages/home/diagnosa/index.php';
