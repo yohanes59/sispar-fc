@@ -69,9 +69,30 @@
   }
 }
 
+/* 
 @media(max-width: 1035px) {
   .table td.aksi {
     display: inline-flex !important;
   }
-}
+} */
 
+@media print {
+  .content-header::before {
+    content: "Laporan ";
+  }
+
+  .content-header {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .aksi,
+  .aksi-button,
+  .navbar,
+  .footer,
+  .line {
+    display: none !important;
+  }
+}

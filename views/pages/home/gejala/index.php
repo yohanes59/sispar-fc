@@ -1,16 +1,20 @@
-<table class="table">
+<h1 class="content-header">Data Gejala</h1>
+<hr class="line">
+<div class="aksi-button">
     <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=tambah">
         <button class="btn tambah"><i class="fa-solid fa-plus"></i> Tambah Data</button>
     </a>
-    <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=print">
+    <a href="" onclick="window.print();">
         <button class="btn"><i class="fa-solid fa-file"></i> Cetak Laporan</button>
     </a>
+</div>
+<table class="table">
     <thead>
         <tr>
             <th>No.</th>
             <th>Kode Gejala</th>
             <th>Nama Gejala</th>
-            <th>Aksi</th>
+            <th class="aksi">Aksi</th>
         </tr>
     </thead>
     <tbody>
