@@ -1,6 +1,6 @@
 <aside class="sidebar">
     <a href="" class="brand-link">
-        <img src="assets/images/logo.png" alt="Logo" class="brand-logo">
+        <img src="/assets/img/logo.png" alt="Logo" class="brand-logo">
         <h1 class="brand-title sidebar-text">Sistem Pakar FC</h1>
     </a>
     <div class="menu">
