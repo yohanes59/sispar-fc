@@ -15,13 +15,13 @@ class gejalaController
         $result = $this->model->cariCode();
 
         if ($result == null) {
-            return 'KG-001';
+            return 'KG-01';
         } else {
             $row = $result->fetch_array();
             $lastCode = substr($row[0], 3);
             $nextCode = intval($lastCode) + 1;
 
-            $nextCodeFormatted = sprintf('%03d', $nextCode);
+            $nextCodeFormatted = sprintf('%02d', $nextCode);
             return 'KG-' . $nextCodeFormatted;
         }
     }
