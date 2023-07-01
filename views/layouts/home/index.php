@@ -3,12 +3,16 @@ session_start();
 
 include './database/koneksi.php';
 include './controllers/userController.php';
+include './controllers/dashboardController.php';
 include './controllers/gejalaController.php';
 include './controllers/kerusakanController.php';
+include './controllers/pengetahuanController.php';
 
 $user = new userController();
+$dashboard = new dashboardController();
 $gejala = new gejalaController();
 $kerusakan = new kerusakanController();
+$pengetahuan = new pengetahuanController();
 $user->guest();
 ?>
 <!DOCTYPE html>
@@ -42,53 +46,7 @@ $user->guest();
         include 'navbar.php';
         ?>
         <section class="content">
-            <?php
-            $sub = @$_GET['sub'];
-            $act = @$_GET['act'];
-            $kode = @$_GET['kode'];
-
-            if ($sub == '') {
-                if ($act == '') {
-                    include './views/pages/home/dashboard.php';
-                } elseif ($act == 'logout') {
-                    $user->logout();
-                }
-            } elseif ($sub == GEJALA_URL) {
-                if ($act == '') {
-                    $gejala->index();
-                } elseif ($act == 'tambah') {
-                    $gejala->create();
-                    if (@$_POST['simpan']) {
-                        $gejala->insert();
-                    }
-                } elseif ($act == 'edit') {
-                    $gejala->edit($kode);
-                    if (@$_POST['simpan']) {
-                        $gejala->update();
-                    }
-                } elseif ($act == 'delete') {
-                    $gejala->destroy($kode);
-                }
-            } elseif ($sub == KERUSAKAN_URL) {
-                if ($act == '') {
-                    $kerusakan->index();
-                } elseif ($act == 'tambah') {
-                    $kerusakan->create();
-                    if (@$_POST['simpan']) {
-                        $kerusakan->insert();
-                    }
-                } elseif ($act == 'edit') {
-                    $kerusakan->edit($kode);
-                    if (@$_POST['simpan']) {
-                        $kerusakan->update();
-                    }
-                } elseif ($act == 'delete') {
-                    $kerusakan->destroy($kode);
-                }
-            } elseif ($sub == DIAGNOSA_URL) {
-                include './views/pages/home/diagnosa/index.php';
-            }
-            ?>
+            <?php include 'content-route.php'; ?>
         </section>
         <?php
         include 'footer.php';

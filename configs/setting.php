@@ -6,5 +6,6 @@ define('HOME_URL', 'home');
 define('DASHBOARD_URL', 'dashboard');
 define('GEJALA_URL', 'gejala');
 define('KERUSAKAN_URL', 'kerusakan');
+define('PENGETAHUAN_URL', 'pengetahuan');
 define('DIAGNOSA_URL', 'diagnosa');
 ?>

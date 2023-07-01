@@ -18,7 +18,7 @@
                 <i class="fa-solid fa-clipboard-check"></i>
                 <p class="sidebar-text">Data Kerusakan</p>
             </a>
-            <a href="?page=" class="menu-item">
+            <a href="?page=<?= HOME_URL ?>&sub=<?= PENGETAHUAN_URL ?>" class="menu-item">
                 <i class="fa-solid fa-rectangle-list"></i>
                 <p class="sidebar-text">Data Pengetahuan</p>
             </a>
