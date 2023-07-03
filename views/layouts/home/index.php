@@ -7,12 +7,16 @@ include './controllers/dashboardController.php';
 include './controllers/gejalaController.php';
 include './controllers/kerusakanController.php';
 include './controllers/pengetahuanController.php';
+include './controllers/aturanController.php';
+include './controllers/diagnosaController.php';
 
 $user = new userController();
 $dashboard = new dashboardController();
 $gejala = new gejalaController();
 $kerusakan = new kerusakanController();
 $pengetahuan = new pengetahuanController();
+$aturan = new aturanController();
+$diagnosa = new diagnosaController();
 $user->guest();
 ?>
 <!DOCTYPE html>

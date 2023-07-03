@@ -20,10 +20,26 @@ class pengetahuanModel
 	public function selectAll()
 	{
 		$query = "SELECT p.*, k.nama AS nama_kerusakan, g.nama AS nama_gejala
-				  FROM pengetahuan as p
-				  JOIN gejala as g ON p.kode_gejala = g.kode 
-				  JOIN kerusakan as k ON p.kode_kerusakan = k.kode 
-				  ORDER BY p.kode_kerusakan ASC";
+		FROM pengetahuan as p
+		JOIN gejala as g ON p.kode_gejala = g.kode 
+		JOIN kerusakan as k ON p.kode_kerusakan = k.kode 
+		ORDER BY p.kode_kerusakan ASC";
+		return $this->execute($query);
+	}
+
+	public function selectAllData()
+	{
+		$query = "SELECT p.kode_kerusakan, p.kode_gejala, k.nama AS nama_kerusakan, g.nama AS nama_gejala
+		FROM pengetahuan as p
+		JOIN gejala as g ON p.kode_gejala = g.kode 
+		JOIN kerusakan as k ON p.kode_kerusakan = k.kode 
+		ORDER BY p.kode_kerusakan ASC";
+		return $this->execute($query);
+	}
+
+	public function selectDataToArray()
+	{
+		$query = "SELECT kode_kerusakan, kode_gejala FROM pengetahuan ORDER BY kode_kerusakan ASC";
 		return $this->execute($query);
 	}
 

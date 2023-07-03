@@ -57,7 +57,11 @@ if ($sub == '') {
     } elseif ($act == 'delete') {
         $pengetahuan->destroy($kode);
     }
+} elseif ($sub == ATURAN_URL) {
+    $aturan->index();
 } elseif ($sub == DIAGNOSA_URL) {
-    include './views/pages/home/diagnosa/index.php';
+    $diagnosa->index();
+    if (@$_POST['proses']) {
+        $diagnosa->process();
+    }
 }
-?>

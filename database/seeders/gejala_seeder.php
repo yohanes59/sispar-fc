@@ -11,95 +11,47 @@ function check_data_gejala($data)
 $data = [
     [
         'kode' => 'KG-01',
-        'nama' => 'Perubahan suara serta sulit atau rasa sakit saat menelan serta mengunyah'
+        'nama' => 'Loding Xiaomi stuck di logo Animasi'
     ],
     [
         'kode' => 'KG-02',
-        'nama' => 'Pembengkakan pada wajah dan leher'
+        'nama' => 'HP Sering restart Sendiri'
     ],
     [
         'kode' => 'KG-03',
-        'nama' => 'Bercak kemerahan atau putih dalam mulut, dan lidah terasa sakit atau mulut nyeri'
+        'nama' => 'Tidak bisa masuk pada menu utama namun selang beberapa detik ponsel mengalami hank dan kemudian ponsel me-restart kembali'
     ],
     [
         'kode' => 'KG-04',
-        'nama' => 'Pendarahan pada rongga mulut dan gigi tanggal dengan sendirinya'
+        'nama' => 'Tidak Bisa masuk Recovery'
     ],
     [
         'kode' => 'KG-05',
-        'nama' => 'Batuk kronis serta telinga terasa sakit dan berdengung'
+        'nama' => 'Hp seringkali mengalami lag'
     ],
     [
         'kode' => 'KG-06',
-        'nama' => 'Timbul benjolan yang muncul di sekitar mata, rahang, leher, atau tenggorokan'
+        'nama' => 'Memori internal pada hp xiaomi sering cepat penuh'
     ],
     [
         'kode' => 'KG-07',
-        'nama' => 'Pembengkakan kelenjar getah bening'
+        'nama' => 'Lupa Password akun MI'
     ],
     [
         'kode' => 'KG-08',
-        'nama' => 'Dada sesak, nyeri, dan berat'
+        'nama' => 'Hp xiaomi mengalami lupa pola'
     ],
     [
         'kode' => 'KG-09',
-        'nama' => 'Batuk berdahak disertai bercak darah'
+        'nama' => 'Data pada file manager tidak bisa di hapus'
     ],
     [
         'kode' => 'KG-10',
-        'nama' => 'Sakit pada tulang, bisa pada bahu, lengan atau tangan serta perubahan pada bentuk jari, yaitu ujung jari menjadi cembung'
+        'nama' => 'Ketika membuka aplikasi sering mengalami force close'
     ],
     [
         'kode' => 'KG-11',
-        'nama' => 'Gatal-gatal atau rasa sakit pada payudara atau ketiak serta perubahan ukuran atau bentuk putting'
-    ],
-    [
-        'kode' => 'KG-12',
-        'nama' => 'Kemunculan benjolan atau pembengkakan yang kemerahan pada ketiak, atau payudara, atau kulit payudara yang menebal serta keluarnya cairan dari puting (biasanya disertai darah)'
-    ],
-    [
-        'kode' => 'KG-13',
-        'nama' => 'Frekuensi buang air kecil semakin sering, tapi jumlah urine yang dikeluarkan hanya sedikit, serta warna urin keruh atau kuning kemerahan'
-    ],
-    [
-        'kode' => 'KG-14',
-        'nama' => 'Kandung kemih terasa tegang, penuh, keras dan nyeri pada perut bagian bawah, serta nyeri atau perih ketika buang air kecil'
-    ],
-    [
-        'kode' => 'KG-15',
-        'nama' => 'Sakit kepala yang tiba-tiba'
-    ],
-    [
-        'kode' => 'KG-16',
-        'nama' => 'Tiba-tiba kehilangan kesadaran, keseimbangan, koordinasi, kontrol tubuh, dan bicara tidak jelas'
-    ],
-    [
-        'kode' => 'KG-17',
-        'nama' => 'Kelemahan dan kelumpuhan pada beberapa bagian tubuh (wajah, lengan, tangan, terutama pada salah satu sisi tubuh)'
-    ],
-    [
-        'kode' => 'KG-18',
-        'nama' => 'Dada sesak, nyeri, dan berat'
-    ],
-    [
-        'kode' => 'KG-19',
-        'nama' => 'Infeksi saluran pernapasan (flu atau pilek)'
-    ],
-    [
-        'kode' => 'KG-20',
-        'nama' => 'Keluar lendir dari rongga hidung terus menerus yang berwarna kemerahan'
-    ],
-    [
-        'kode' => 'KG-21',
-        'nama' => 'Pembengkakan pada pergelangan kaki, kaki, dan tungkai kiri serta kanan'
-    ],
-    [
-        'kode' => 'KG-22',
-        'nama' => 'Terlalu cepat ejakulasi'
-    ],
-    [
-        'kode' => 'KG-23',
-        'nama' => 'Kesulitan memulai dan mempertahankan ereksi'
+        'nama' => 'Tema pada aplikasi xiaomi tidak bisa di pasang'
     ],
 ];
 

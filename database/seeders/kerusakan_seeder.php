@@ -11,35 +11,19 @@ function check_data_kerusakan($data)
 $data = [
     [
         'kode' => 'KK-01',
-        'nama' => 'Kanker Mulut'
+        'nama' => 'Bootloop'
     ],
     [
         'kode' => 'KK-02',
-        'nama' => 'Kanker Tenggorokan'
+        'nama' => 'Lemot/Lag'
     ],
     [
         'kode' => 'KK-03',
-        'nama' => 'Kanker Paru-Paru'
+        'nama' => 'Human Error'
     ],
     [
         'kode' => 'KK-04',
-        'nama' => 'Kanker Payudara'
-    ],
-    [
-        'kode' => 'KK-05',
-        'nama' => 'Kanker Kandung Kemih'
-    ],
-    [
-        'kode' => 'KK-06',
-        'nama' => 'Stroke'
-    ],
-    [
-        'kode' => 'KK-07',
-        'nama' => 'Bronkitis'
-    ],
-    [
-        'kode' => 'KK-08',
-        'nama' => 'Impoten'
+        'nama' => 'Aplikasi/Software Error'
     ],
 ];
 

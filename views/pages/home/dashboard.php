@@ -6,7 +6,7 @@
                 <p>Data Gejala</p>
             </div>
             <div class="info-icon">
-                <i class="fa-solid fa-clipboard-check"></i>
+                <i class="fa-solid fa-book"></i>
             </div>
         </div>
         <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>" class="info-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
@@ -19,7 +19,7 @@
                 <p>Data Kerusakan</p>
             </div>
             <div class="info-icon">
-                <i class="fa-solid fa-rectangle-list"></i>
+                <i class="fa-solid fa-book-skull"></i>
             </div>
         </div>
         <a href="?page=<?= HOME_URL ?>&sub=<?= KERUSAKAN_URL ?>" class="info-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
@@ -29,10 +29,10 @@
         <div class="info-body">
             <div class="info-header">
                 <h3 class="info-title"><?= $jumlahPengetahuan; ?></h3>
-                <p>Data Pengetahuan</p>
+                <p>Data User</p>
             </div>
             <div class="info-icon">
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-users"></i>
             </div>
         </div>
         <a href="?page=<?= HOME_URL ?>&sub=<?= PENGETAHUAN_URL ?>" class="info-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>

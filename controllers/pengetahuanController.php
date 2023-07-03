@@ -36,16 +36,6 @@ class pengetahuanController
         include './views/pages/home/pengetahuan/tambah.php';
     }
 
-    // function validate_name($nama)
-    // {
-    //     if (empty(trim($nama))) {
-    //         $this->sweetalert('error', 'input required!', 'Nama tidak boleh kosong');
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // }
-
     public function insert()
     {
         $kerusakan = @$_POST['kerusakan'];

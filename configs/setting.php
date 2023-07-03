@@ -7,5 +7,6 @@ define('DASHBOARD_URL', 'dashboard');
 define('GEJALA_URL', 'gejala');
 define('KERUSAKAN_URL', 'kerusakan');
 define('PENGETAHUAN_URL', 'pengetahuan');
+define('ATURAN_URL', 'aturan');
 define('DIAGNOSA_URL', 'diagnosa');
 ?>
