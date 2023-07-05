@@ -131,6 +131,7 @@ class userController
                 $data = $this->model->fetch($user);
                 if (password_verify($password, $data['password'])) {
                     $_SESSION["login"] = true;
+                    $_SESSION['user_id'] = $data['id'];
                     $_SESSION['username'] = $data['username'];
                     $_SESSION['role'] = $data['role'];
                     if ($data['role'] == 'Admin') {
