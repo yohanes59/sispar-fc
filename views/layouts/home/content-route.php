@@ -62,6 +62,6 @@ if ($sub == '') {
 } elseif ($sub == DIAGNOSA_URL) {
     $diagnosa->index();
     if (@$_POST['proses']) {
-        $diagnosa->process();
+        $diagnosa->insert();
     }
 }
