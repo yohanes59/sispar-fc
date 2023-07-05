@@ -13,7 +13,7 @@ class aturanController
 
     public function index()
     {
-        $data = $this->pModel->selectAllData();
+        $data = $this->pModel->selectRuleData();
         $arrayData = [];
         while ($row = $data->fetch_assoc()) {
             $kodeKerusakan = $row['kode_kerusakan'];

@@ -27,7 +27,7 @@ class pengetahuanModel
 		return $this->execute($query);
 	}
 
-	public function selectAllData()
+	public function selectRuleData()
 	{
 		$query = "SELECT p.kode_kerusakan, p.kode_gejala, k.nama AS nama_kerusakan, g.nama AS nama_gejala
 		FROM pengetahuan as p
@@ -37,9 +37,11 @@ class pengetahuanModel
 		return $this->execute($query);
 	}
 
-	public function selectDataToArray()
+	public function selectAllKode()
 	{
-		$query = "SELECT kode_kerusakan, kode_gejala FROM pengetahuan ORDER BY kode_kerusakan ASC";
+		$query = "SELECT p.kode_kerusakan, p.kode_gejala
+		FROM pengetahuan as p
+		ORDER BY p.kode_kerusakan ASC";
 		return $this->execute($query);
 	}
 
