@@ -27,7 +27,7 @@ class pengetahuanModel
 		return $this->execute($query);
 	}
 
-	public function selectRuleData()
+	public function showRuleDataToPage()
 	{
 		$query = "SELECT p.kode_kerusakan, p.kode_gejala, k.nama AS nama_kerusakan, g.nama AS nama_gejala
 		FROM pengetahuan as p
@@ -37,7 +37,7 @@ class pengetahuanModel
 		return $this->execute($query);
 	}
 
-	public function selectAllKode()
+	public function selectCodeData()
 	{
 		$query = "SELECT p.kode_kerusakan, p.kode_gejala
 		FROM pengetahuan as p

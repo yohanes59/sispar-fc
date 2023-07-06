@@ -34,4 +34,13 @@ class diagnosaModel
         $query = "INSERT INTO diagnosa(kode_diagnosa, user_id, kode_gejala, created_at, updated_at) VALUES ('$kode_diagnosa', '$user_id', '$kode_gejala', NOW(), NOW())";
         return $this->execute($query);
     }
+
+    public function selectLast()
+    {
+        $kode_diagnosa = $this->cariCode();
+        $kode = $kode_diagnosa->fetch_array();
+        $kd = $kode[0];
+        $query = "SELECT kode_gejala FROM diagnosa WHERE kode_diagnosa='$kd'";
+        return $this->execute($query);
+    }
 }
