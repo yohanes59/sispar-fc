@@ -1,5 +1,4 @@
 <?php
-
 class aturanController extends controller
 {
     public $pModel, $kModel, $gModel;

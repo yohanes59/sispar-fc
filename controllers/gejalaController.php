@@ -26,17 +26,6 @@ class gejalaController extends controller
         }
     }
 
-    // function sweetalert($icon, $title, $text)
-    // {
-    //     echo "<script type='text/javascript'>
-    // 		Swal.fire({
-    // 		icon: '$icon',
-    // 		title: '$title',
-    // 		text: '$text'
-    // 		});
-    // 	</script>";
-    // }
-
     public function index()
     {
         $data = $this->model->selectAll();

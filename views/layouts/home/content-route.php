@@ -3,7 +3,7 @@ $sub = @$_GET['sub'];
 $act = @$_GET['act'];
 $kode = @$_GET['kode'];
 
-if ($sub == '') {
+if ($sub == HOME_URL) {
     if ($act == '') {
         $dashboard->index();
     } elseif ($act == 'logout') {
@@ -57,6 +57,10 @@ if ($sub == '') {
     } elseif ($act == 'delete') {
         $pengetahuan->destroy($kode);
     }
+} elseif ($sub == RIWAYAT_URL) {
+    if ($act == '') {
+        $riwayat->index();
+    }
 } elseif ($sub == ATURAN_URL) {
     $aturan->index();
 } elseif ($sub == DIAGNOSA_URL) {
@@ -65,5 +69,5 @@ if ($sub == '') {
         $diagnosa->process();
     }
 } elseif ($sub == HASIL_URL) {
-    $diagnosa->showHasil();
+    $hasil->index();
 }

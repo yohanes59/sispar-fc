@@ -22,7 +22,7 @@ class userController extends controller
     {
         if (isset($_SESSION["login"]) && $_SESSION["login"] === true) {
             if (isset($_SESSION['role']) && $_SESSION['role'] == 'Admin') {
-                header("location: ?page=" . HOME_URL);
+                header("location: ?page=" . HOME_URL . "&sub=" . HOME_URL);
             } elseif (isset($_SESSION['role']) && $_SESSION['role'] == 'User') {
                 header("location: ?page=" . HOME_URL . "&sub=" . DIAGNOSA_URL);
             }
@@ -124,7 +124,7 @@ class userController extends controller
                     $_SESSION['username'] = $data['username'];
                     $_SESSION['role'] = $data['role'];
                     if ($data['role'] == 'Admin') {
-                        header("location: ?page=" . HOME_URL);
+                        header("location: ?page=" . HOME_URL . "&sub=" . HOME_URL);
                     } elseif ($data['role'] == 'User') {
                         header("location: ?page=" . HOME_URL . "&sub=" . DIAGNOSA_URL);
                     }

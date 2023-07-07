@@ -1,5 +1,4 @@
 <?php
-
 class dashboardController extends controller
 {
     public $pModel, $kModel, $gModel;
