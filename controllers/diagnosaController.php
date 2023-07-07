@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'models/diagnosaModel.php';
 include 'models/hasilModel.php';
 
@@ -45,12 +46,6 @@ class diagnosaController extends controller
     {
         $data = $this->gModel->selectAll();
         include './views/pages/home/diagnosa/index.php';
-    }
-
-    public function showHasil()
-    {
-        $data = $this->hModel->selectLastData();
-        include './views/pages/home/diagnosa/hasil.php';
     }
 
     public function insert()
@@ -127,9 +122,9 @@ class diagnosaController extends controller
         }
 
         $insert = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan);
-        
         if ($insert) {
-            header("location: ?page=" . HOME_URL . "&sub=" . HASIL_URL);
+            header("Location: ?page=home&sub=hasil");
+            exit(); // Make sure to exit after the redirect
         }
     }
 }
