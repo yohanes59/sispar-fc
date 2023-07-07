@@ -2,6 +2,7 @@
 session_start();
 
 include './database/koneksi.php';
+include './controllers/controller.php';
 include './controllers/userController.php';
 
 $user = new userController();
