@@ -1,7 +1,7 @@
 <?php
 include 'models/kerusakanModel.php';
 
-class kerusakanController
+class kerusakanController extends controller
 {
     public $model;
 
@@ -24,17 +24,6 @@ class kerusakanController
             $nextCodeFormatted = sprintf('%02d', $nextCode);
             return 'KK-' . $nextCodeFormatted;
         }
-    }
-
-    function sweetalert($icon, $title, $text)
-    {
-        echo "<script type='text/javascript'>
-    		Swal.fire({
-    		icon: '$icon',
-    		title: '$title',
-    		text: '$text'
-    		});
-    	</script>";
     }
 
     public function index()

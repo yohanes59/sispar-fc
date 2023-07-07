@@ -1,7 +1,7 @@
 <?php
 include 'models/gejalaModel.php';
 
-class gejalaController
+class gejalaController extends controller
 {
     public $model;
 
@@ -26,16 +26,16 @@ class gejalaController
         }
     }
 
-    function sweetalert($icon, $title, $text)
-    {
-        echo "<script type='text/javascript'>
-    		Swal.fire({
-    		icon: '$icon',
-    		title: '$title',
-    		text: '$text'
-    		});
-    	</script>";
-    }
+    // function sweetalert($icon, $title, $text)
+    // {
+    //     echo "<script type='text/javascript'>
+    // 		Swal.fire({
+    // 		icon: '$icon',
+    // 		title: '$title',
+    // 		text: '$text'
+    // 		});
+    // 	</script>";
+    // }
 
     public function index()
     {

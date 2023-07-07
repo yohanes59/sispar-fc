@@ -64,4 +64,6 @@ if ($sub == '') {
     if (@$_POST['proses']) {
         $diagnosa->process();
     }
+} elseif ($sub == HASIL_URL) {
+    $diagnosa->showHasil();
 }

@@ -1,6 +1,6 @@
 <?php
 
-class dashboardController
+class dashboardController extends controller
 {
     public $pModel, $kModel, $gModel;
 

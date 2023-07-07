@@ -9,4 +9,5 @@ define('KERUSAKAN_URL', 'kerusakan');
 define('PENGETAHUAN_URL', 'pengetahuan');
 define('ATURAN_URL', 'aturan');
 define('DIAGNOSA_URL', 'diagnosa');
+define('HASIL_URL', 'hasil');
 ?>

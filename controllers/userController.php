@@ -1,7 +1,7 @@
 <?php
 include 'models/userModel.php';
 
-class userController
+class userController extends controller
 {
     public $model;
 
@@ -39,17 +39,6 @@ class userController
     {
         $this->isLogin_session();
         include "views/pages/auth/register.php";
-    }
-
-    function sweetalert($icon, $title, $text)
-    {
-        echo "<script type='text/javascript'>
-			Swal.fire({
-			icon: '$icon',
-			title: '$title',
-			text: '$text'
-			});
-		</script>";
     }
 
     function validate_username($username)

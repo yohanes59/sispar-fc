@@ -2,7 +2,7 @@
 include 'models/diagnosaModel.php';
 include 'models/hasilModel.php';
 
-class diagnosaController
+class diagnosaController extends controller
 {
     public $pModel, $kModel, $gModel, $hModel, $model;
 
@@ -13,17 +13,6 @@ class diagnosaController
         $this->pModel = new pengetahuanModel();
         $this->hModel = new hasilModel();
         $this->model = new diagnosaModel();
-    }
-
-    function sweetalert($icon, $title, $text)
-    {
-        echo "<script type='text/javascript'>
-    		Swal.fire({
-    		icon: '$icon',
-    		title: '$title',
-    		text: '$text'
-    		});
-    	</script>";
     }
 
     function validate_input($input)
@@ -56,6 +45,12 @@ class diagnosaController
     {
         $data = $this->gModel->selectAll();
         include './views/pages/home/diagnosa/index.php';
+    }
+
+    public function showHasil()
+    {
+        $data = $this->hModel->selectLastData();
+        include './views/pages/home/diagnosa/hasil.php';
     }
 
     public function insert()
@@ -131,6 +126,10 @@ class diagnosaController
             $nama_kerusakan = "-";
         }
 
-        $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan);
+        $insert = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan);
+        
+        if ($insert) {
+            header("location: ?page=" . HOME_URL . "&sub=" . HASIL_URL);
+        }
     }
 }

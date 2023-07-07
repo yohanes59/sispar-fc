@@ -1,6 +1,6 @@
 <?php
 
-class aturanController
+class aturanController extends controller
 {
     public $pModel, $kModel, $gModel;
 

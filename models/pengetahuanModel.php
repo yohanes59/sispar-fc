@@ -1,22 +1,6 @@
 <?php
-class pengetahuanModel
+class pengetahuanModel extends model
 {
-	public function execute($query)
-	{
-		include './database/koneksi.php';
-		return mysqli_query($conn, $query);
-	}
-
-	public function fetch($var)
-	{
-		return mysqli_fetch_array($var, MYSQLI_ASSOC);
-	}
-
-	public function numRow($data)
-	{
-		return mysqli_num_rows($data);
-	}
-
 	public function selectAll()
 	{
 		$query = "SELECT p.*, k.nama AS nama_kerusakan, g.nama AS nama_gejala

@@ -1,7 +1,7 @@
 <?php
 include 'models/pengetahuanModel.php';
 
-class pengetahuanController
+class pengetahuanController extends controller
 {
     public $pModel, $kModel, $gModel;
 
@@ -10,17 +10,6 @@ class pengetahuanController
         $this->pModel = new pengetahuanModel();
         $this->kModel = new kerusakanModel();
         $this->gModel = new gejalaModel();
-    }
-
-    function sweetalert($icon, $title, $text)
-    {
-        echo "<script type='text/javascript'>
-    		Swal.fire({
-    		icon: '$icon',
-    		title: '$title',
-    		text: '$text'
-    		});
-    	</script>";
     }
 
     public function index()

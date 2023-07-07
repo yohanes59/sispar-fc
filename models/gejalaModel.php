@@ -1,22 +1,6 @@
 <?php
-class gejalaModel
+class gejalaModel extends model
 {
-	public function execute($query)
-	{
-		include './database/koneksi.php';
-		return mysqli_query($conn, $query);
-	}
-
-	public function fetch($var)
-	{
-		return mysqli_fetch_array($var, MYSQLI_ASSOC);
-	}
-
-	public function numRow($data)
-	{
-		return mysqli_num_rows($data);
-	}
-
 	public function cariCode()
 	{
 		$query = "SELECT MAX(kode) FROM gejala";
