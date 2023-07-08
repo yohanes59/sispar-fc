@@ -59,8 +59,10 @@ if ($sub == HOME_URL) {
     }
 } elseif ($sub == RIWAYAT_URL) {
     if ($act == '') {
-        $riwayat->index();
+        $hasil->showRiwayat();
     }
+} elseif ($sub == WELCOME_URL) {
+    include './views/pages/home/welcome.php';
 } elseif ($sub == ATURAN_URL) {
     $aturan->index();
 } elseif ($sub == DIAGNOSA_URL) {

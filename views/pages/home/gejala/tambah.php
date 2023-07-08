@@ -1,6 +1,6 @@
 <div class="container">
     <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>">
-        <button class="btn"><i class="fa-solid fa-chevron-left"></i> Kembali</button>
+        <button class="btn"><i class="fas fa-chevron-double-left"></i> Kembali</button>
     </a>
     <form method="POST">
         <h1 style="margin: 10px 0">Tambah Data Gejala</h1>

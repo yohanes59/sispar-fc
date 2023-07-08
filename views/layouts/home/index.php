@@ -10,6 +10,7 @@ include './controllers/kerusakanController.php';
 include './controllers/pengetahuanController.php';
 include './controllers/aturanController.php';
 include './controllers/diagnosaController.php';
+include './controllers/hasilController.php';
 
 $user = new userController();
 $dashboard = new dashboardController();
@@ -18,6 +19,7 @@ $kerusakan = new kerusakanController();
 $pengetahuan = new pengetahuanController();
 $aturan = new aturanController();
 $diagnosa = new diagnosaController();
+$hasil = new hasilController();
 $user->guest();
 ?>
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ $user->guest();
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
 
     <!-- style -->
     <link rel="stylesheet" href="../../../assets/css/home/style.css">

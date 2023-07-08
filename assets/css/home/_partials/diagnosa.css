@@ -1,9 +1,7 @@
 .wrapper {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 30px;
-    width: 90%;
-    margin: auto;
+    width: 80%;
 }
 
 .element {
@@ -144,4 +142,16 @@
 label {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+/* Small devices (Mobiles) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .element {
+        width: 300px;
+    }
 }

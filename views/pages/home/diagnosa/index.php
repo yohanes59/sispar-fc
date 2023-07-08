@@ -15,6 +15,6 @@
                 </div>
             <?php endforeach; ?>
         </div>
-        <input class="btn" name="proses" type="submit">
+        <input class="btn" name="proses" type="submit" value="Diagnosa">
     </form>
 </div>

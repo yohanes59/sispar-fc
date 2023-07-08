@@ -2,10 +2,10 @@
 <hr class="line">
 <div class="aksi-button">
     <a href="?page=<?= HOME_URL ?>&sub=<?= KERUSAKAN_URL ?>&act=tambah">
-        <button class="btn tambah"><i class="fa-solid fa-plus"></i> Tambah Data</button>
+        <button class="btn tambah"><i class="fas fa-plus"></i> Tambah Data</button>
     </a>
     <a href="" onclick="window.print();">
-        <button class="btn"><i class="fa-solid fa-file"></i> Cetak Laporan</button>
+        <button class="btn"><i class="fas fa-file"></i> Cetak Laporan</button>
     </a>
 </div>
 <table class="table">
