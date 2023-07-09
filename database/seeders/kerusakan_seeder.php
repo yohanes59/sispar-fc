@@ -11,19 +11,27 @@ function check_data_kerusakan($data)
 $data = [
     [
         'kode' => 'KK-01',
-        'nama' => 'Bootloop'
+        'nama' => 'Tension kendor'
     ],
     [
         'kode' => 'KK-02',
-        'nama' => 'Lemot/Lag'
+        'nama' => 'Tension kencang'
     ],
     [
         'kode' => 'KK-03',
-        'nama' => 'Human Error'
+        'nama' => 'Jarum bengkok dan terbalik'
     ],
     [
         'kode' => 'KK-04',
-        'nama' => 'Aplikasi/Software Error'
+        'nama' => 'Jarum tumpul'
+    ],
+    [
+        'kode' => 'KK-05',
+        'nama' => 'Gigi tumpul'
+    ],
+    [
+        'kode' => 'KK-06',
+        'nama' => 'Gigi rusak'
     ],
 ];
 

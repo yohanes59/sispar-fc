@@ -70,13 +70,6 @@
   }
 }
 
-/* 
-@media(max-width: 1035px) {
-  .table td.aksi {
-    display: inline-flex !important;
-  }
-} */
-
 @media print {
   .content-header::before {
     content: "Laporan ";
@@ -102,4 +95,6 @@
     border: 1px solid #000;
     color: #000;
   }
+
+
 }

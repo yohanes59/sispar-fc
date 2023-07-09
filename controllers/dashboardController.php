@@ -1,11 +1,11 @@
 <?php
 class dashboardController extends controller
 {
-    public $pModel, $kModel, $gModel;
+    public $hModel, $kModel, $gModel;
 
     public function __construct()
     {
-        $this->pModel = new pengetahuanModel();
+        $this->hModel = new hasilModel();
         $this->kModel = new kerusakanModel();
         $this->gModel = new gejalaModel();
     }
@@ -14,7 +14,7 @@ class dashboardController extends controller
     {
         $jumlahKerusakan = $this->kModel->numRow($this->kModel->selectAll());
         $jumlahGejala = $this->gModel->numRow($this->gModel->selectAll());
-        $jumlahPengetahuan = $this->pModel->numRow($this->pModel->selectAll());
+        $jumlahRiwayat = $this->hModel->numRow($this->hModel->selectAll());
         include './views/pages/home/dashboard.php';
     }
 }

@@ -18,3 +18,4 @@
         <input class="btn" name="proses" type="submit" value="Diagnosa">
     </form>
 </div>
+

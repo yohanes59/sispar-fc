@@ -22,47 +22,97 @@ $data = [
     [
         'id' => '3',
         'kode_kerusakan' => 'KK-01',
-        'kode_gejala' => 'KG-03'
+        'kode_gejala' => 'KG-06'
     ],
     [
         'id' => '4',
-        'kode_kerusakan' => 'KK-01',
-        'kode_gejala' => 'KG-04'
+        'kode_kerusakan' => 'KK-02',
+        'kode_gejala' => 'KG-03'
     ],
     [
         'id' => '5',
         'kode_kerusakan' => 'KK-02',
-        'kode_gejala' => 'KG-05'
+        'kode_gejala' => 'KG-04'
     ],
     [
         'id' => '6',
         'kode_kerusakan' => 'KK-02',
-        'kode_gejala' => 'KG-06'
+        'kode_gejala' => 'KG-10'
     ],
     [
         'id' => '7',
-        'kode_kerusakan' => 'KK-03',
-        'kode_gejala' => 'KG-07'
+        'kode_kerusakan' => 'KK-02',
+        'kode_gejala' => 'KG-11'
     ],
     [
         'id' => '8',
         'kode_kerusakan' => 'KK-03',
-        'kode_gejala' => 'KG-08'
+        'kode_gejala' => 'KG-04'
     ],
     [
         'id' => '9',
+        'kode_kerusakan' => 'KK-03',
+        'kode_gejala' => 'KG-05'
+    ],
+    [
+        'id' => '10',
+        'kode_kerusakan' => 'KK-03',
+        'kode_gejala' => 'KG-12'
+    ],
+    [
+        'id' => '11',
+        'kode_kerusakan' => 'KK-03',
+        'kode_gejala' => 'KG-13'
+    ],
+    [
+        'id' => '12',
+        'kode_kerusakan' => 'KK-04',
+        'kode_gejala' => 'KG-04'
+    ],
+    [
+        'id' => '13',
         'kode_kerusakan' => 'KK-04',
         'kode_gejala' => 'KG-09'
     ],
     [
-        'id' => '10',
+        'id' => '14',
         'kode_kerusakan' => 'KK-04',
+        'kode_gejala' => 'KG-14'
+    ],
+    [
+        'id' => '15',
+        'kode_kerusakan' => 'KK-05',
+        'kode_gejala' => 'KG-07'
+    ],
+    [
+        'id' => '16',
+        'kode_kerusakan' => 'KK-05',
+        'kode_gejala' => 'KG-09'
+    ],
+    [
+        'id' => '17',
+        'kode_kerusakan' => 'KK-05',
         'kode_gejala' => 'KG-10'
     ],
     [
-        'id' => '11',
-        'kode_kerusakan' => 'KK-04',
-        'kode_gejala' => 'KG-11'
+        'id' => '18',
+        'kode_kerusakan' => 'KK-06',
+        'kode_gejala' => 'KG-07'
+    ],
+    [
+        'id' => '19',
+        'kode_kerusakan' => 'KK-06',
+        'kode_gejala' => 'KG-08'
+    ],
+    [
+        'id' => '20',
+        'kode_kerusakan' => 'KK-06',
+        'kode_gejala' => 'KG-10'
+    ],
+    [
+        'id' => '21',
+        'kode_kerusakan' => 'KK-06',
+        'kode_gejala' => 'KG-13'
     ],
 ];
 

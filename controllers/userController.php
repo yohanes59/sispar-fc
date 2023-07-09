@@ -21,10 +21,10 @@ class userController extends controller
     public function isLogin_session()
     {
         if (isset($_SESSION["login"]) && $_SESSION["login"] === true) {
-            if (isset($_SESSION['role']) && $_SESSION['role'] == 'Admin') {
+            if (isset($_SESSION['role']) && $_SESSION['role'] != 'Admin') {
+                header("location: ?page=" . HOME_URL . "&sub=" . WELCOME_URL);
+            } elseif (isset($_SESSION['role']) && $_SESSION['role'] != 'User') {
                 header("location: ?page=" . HOME_URL . "&sub=" . HOME_URL);
-            } elseif (isset($_SESSION['role']) && $_SESSION['role'] == 'User') {
-                header("location: ?page=" . HOME_URL . "&sub=" . DIAGNOSA_URL);
             }
         }
     }
@@ -126,7 +126,7 @@ class userController extends controller
                     if ($data['role'] == 'Admin') {
                         header("location: ?page=" . HOME_URL . "&sub=" . HOME_URL);
                     } elseif ($data['role'] == 'User') {
-                        header("location: ?page=" . HOME_URL . "&sub=" . DIAGNOSA_URL);
+                        header("location: ?page=" . HOME_URL . "&sub=" . WELCOME_URL);
                     }
                 } else {
                     $this->sweetalert('error', 'Login Failed!', 'Username or password is incorrect!');

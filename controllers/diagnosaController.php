@@ -1,7 +1,6 @@
 <?php
 ob_start();
 include 'models/diagnosaModel.php';
-include 'models/hasilModel.php';
 
 class diagnosaController extends controller
 {
@@ -18,8 +17,8 @@ class diagnosaController extends controller
 
     function validate_input($input)
     {
-        if (count($input) > 5) {
-            $this->sweetalert('error', 'input error!', 'Input gejala maksimal 5');
+        if (count($input) > 4) {
+            $this->sweetalert('error', 'input error!', 'Input gejala maksimal 4');
             return false;
         } else {
             return true;
@@ -48,7 +47,7 @@ class diagnosaController extends controller
         include './views/pages/home/diagnosa/index.php';
     }
 
-    public function insert()
+    public function insertDiagnosa()
     {
         $kode_diagnosa = $this->generate_code();
         $user_id = $_SESSION['user_id'];
@@ -92,7 +91,7 @@ class diagnosaController extends controller
     public function process()
     {
         // data input
-        $data_kode_diagnosa = $this->insert();
+        $data_kode_diagnosa = $this->insertDiagnosa();
 
         // data kode diagnosa
         $data_pengetahuan = $this->pModel->selectCodeData();
@@ -106,6 +105,7 @@ class diagnosaController extends controller
 
         $hasil = $this->forward_chaining($rule, array_column($data_kode_diagnosa, 'kode_gejala'));
 
+        // proses insert ke tabel hasil
         $kode = $this->model->cariCode($data_kode_diagnosa);
         $kode = $this->model->fetch($kode);
         $nama = $this->kModel->select($hasil);
@@ -121,10 +121,14 @@ class diagnosaController extends controller
             $nama_kerusakan = "-";
         }
 
-        $insert = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan);
-        if ($insert) {
-            header("Location: ?page=home&sub=hasil");
-            exit(); // Make sure to exit after the redirect
+        // trigger insert hasil
+        $kode_gejala = $_POST['input'];
+        if ($this->validate_input($kode_gejala)) {
+            $insertHasil = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan);
+            if ($insertHasil) {
+                header("Location: ?page=home&sub=hasil");
+                exit();
+            }
         }
     }
 }

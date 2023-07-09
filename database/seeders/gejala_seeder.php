@@ -11,47 +11,59 @@ function check_data_gejala($data)
 $data = [
     [
         'kode' => 'KG-01',
-        'nama' => 'Loding Xiaomi stuck di logo Animasi'
+        'nama' => 'Jahitan kusut'
     ],
     [
         'kode' => 'KG-02',
-        'nama' => 'HP Sering restart Sendiri'
+        'nama' => 'Jahitan kendor'
     ],
     [
         'kode' => 'KG-03',
-        'nama' => 'Tidak bisa masuk pada menu utama namun selang beberapa detik ponsel mengalami hank dan kemudian ponsel me-restart kembali'
+        'nama' => 'Benang mudah putus'
     ],
     [
         'kode' => 'KG-04',
-        'nama' => 'Tidak Bisa masuk Recovery'
+        'nama' => 'Jahitan loncat'
     ],
     [
         'kode' => 'KG-05',
-        'nama' => 'Hp seringkali mengalami lag'
+        'nama' => 'Jahitan tidak mengait'
     ],
     [
         'kode' => 'KG-06',
-        'nama' => 'Memori internal pada hp xiaomi sering cepat penuh'
+        'nama' => 'Benang mudah lepas'
     ],
     [
         'kode' => 'KG-07',
-        'nama' => 'Lupa Password akun MI'
+        'nama' => 'Bahan tidak jalan'
     ],
     [
         'kode' => 'KG-08',
-        'nama' => 'Hp xiaomi mengalami lupa pola'
+        'nama' => 'Jalan tidak stabil'
     ],
     [
         'kode' => 'KG-09',
-        'nama' => 'Data pada file manager tidak bisa di hapus'
+        'nama' => 'Bahan rusak'
     ],
     [
         'kode' => 'KG-10',
-        'nama' => 'Ketika membuka aplikasi sering mengalami force close'
+        'nama' => 'Suara berisik'
     ],
     [
         'kode' => 'KG-11',
-        'nama' => 'Tema pada aplikasi xiaomi tidak bisa di pasang'
+        'nama' => 'Sulit memasukkan kain'
+    ],
+    [
+        'kode' => 'KG-12',
+        'nama' => 'Jarum patah'
+    ],
+    [
+        'kode' => 'KG-13',
+        'nama' => 'Jahitan tidak rapi'
+    ],
+    [
+        'kode' => 'KG-14',
+        'nama' => 'Sulit menusuk kain'
     ],
 ];
 

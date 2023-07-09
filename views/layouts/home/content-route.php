@@ -3,6 +3,7 @@ $sub = @$_GET['sub'];
 $act = @$_GET['act'];
 $kode = @$_GET['kode'];
 
+// Admin
 if ($sub == HOME_URL) {
     if ($act == '') {
         $dashboard->index();
@@ -58,10 +59,13 @@ if ($sub == HOME_URL) {
         $pengetahuan->destroy($kode);
     }
 } elseif ($sub == RIWAYAT_URL) {
+
     if ($act == '') {
         $hasil->showRiwayat();
     }
-} elseif ($sub == WELCOME_URL) {
+}
+// User
+if ($sub == WELCOME_URL) {
     include './views/pages/home/welcome.php';
 } elseif ($sub == ATURAN_URL) {
     $aturan->index();

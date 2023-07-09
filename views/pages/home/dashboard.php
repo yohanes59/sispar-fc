@@ -28,14 +28,14 @@
     <div class="info">
         <div class="info-body">
             <div class="info-header">
-                <h3 class="info-title">10</h3>
+                <h3 class="info-title"><?= $jumlahRiwayat; ?></h3>
                 <p>Data Riwayat Diagnosa</p>
             </div>
             <div class="info-icon">
                 <i class="fas fa-history"></i>
             </div>
         </div>
-        <a href="?page=<?= HOME_URL ?>&sub=<?= PENGETAHUAN_URL ?>" class="info-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="?page=<?= HOME_URL ?>&sub=<?= RIWAYAT_URL ?>" class="info-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 
 </div>
