@@ -1,5 +1,4 @@
 <?php
-ob_start();
 include 'models/diagnosaModel.php';
 
 class diagnosaController extends controller
