@@ -16,7 +16,10 @@ class diagnosaController extends controller
 
     function validate_input($input)
     {
-        if (count($input) > 4) {
+        if (!is_array($input)) {
+            $this->sweetalert('error', 'input error!', 'Input gejala minimal 1');
+            return false;
+        } elseif (count($input) > 4) {
             $this->sweetalert('error', 'input error!', 'Input gejala maksimal 4');
             return false;
         } else {
@@ -50,13 +53,17 @@ class diagnosaController extends controller
     {
         $kode_diagnosa = $this->generate_code();
         $user_id = $_SESSION['user_id'];
-        $kode_gejala = $_POST['input'];
 
-        if ($this->validate_input($kode_gejala)) {
-            foreach ($kode_gejala as $gejala) {
-                $this->model->insert($kode_diagnosa, $user_id, $gejala);
+        if (isset($_POST['input'])) {
+            $kode_gejala = $_POST['input'];
+
+            if ($this->validate_input($kode_gejala)) {
+                foreach ($kode_gejala as $gejala) {
+                    $this->model->insert($kode_diagnosa, $user_id, $gejala);
+                }
             }
         }
+
 
         $data_diagnosa = $this->model->selectLast();
         $data = array();
@@ -121,8 +128,13 @@ class diagnosaController extends controller
         }
 
         // trigger insert hasil
-        $kode_gejala = $_POST['input'];
-        if ($this->validate_input($kode_gejala)) {
+        if (isset($_POST['input'])) {
+            $kode_gejala = $_POST['input'];
+        } else {
+            $kode_gejala = null;
+        }
+
+        if ($this->validate_input($kode_gejala) && $kode_gejala !== null) {
             $insertHasil = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan);
             if ($insertHasil) {
                 header("Location: ?page=home&sub=hasil");
