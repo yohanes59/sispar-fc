@@ -14,6 +14,7 @@
             <th>No.</th>
             <th>Kode Kerusakan</th>
             <th>Nama Kerusakan</th>
+            <th>Solusi</th>
             <th class="aksi">Aksi</th>
         </tr>
     </thead>
@@ -27,6 +28,7 @@
                 <td data-label="No."><?= $no; ?></td>
                 <td data-label="Kode Kerusakan"><?= $data_kerusakan['kode']; ?></td>
                 <td data-label="Nama Kerusakan"><?= $data_kerusakan['nama']; ?></td>
+                <td data-label="Solusi"><?= $data_kerusakan['solusi']; ?></td>
                 <td data-label="Aksi" class="aksi">
                     <a href="?page=<?= HOME_URL ?>&sub=<?= KERUSAKAN_URL ?>&act=edit&kode=<?= $data_kerusakan['kode']; ?>">
                         <button class="btn">
