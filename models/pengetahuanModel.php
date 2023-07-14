@@ -13,7 +13,7 @@ class pengetahuanModel extends model
 
 	public function showRuleDataToPage()
 	{
-		$query = "SELECT p.kode_kerusakan, p.kode_gejala, k.nama AS nama_kerusakan, g.nama AS nama_gejala
+		$query = "SELECT p.kode_kerusakan, p.kode_gejala, k.nama AS nama_kerusakan, g.nama AS nama_gejala, k.solusi AS solusi
 		FROM pengetahuan as p
 		JOIN gejala as g ON p.kode_gejala = g.kode 
 		JOIN kerusakan as k ON p.kode_kerusakan = k.kode 

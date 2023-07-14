@@ -2,7 +2,7 @@
 <hr class="line">
 <?php
 $data = json_decode($jsonData, true);
-
+// var_dump($data);
 $no = 1;
 echo "<table class='table'>";
 echo "
@@ -11,6 +11,7 @@ echo "
         <th>No.</th>
         <th>Nama Kerusakan</th>
         <th>Nama Gejala</th>
+        <th>Solusi</th>
     </tr>
 </thead>
 <tbody>
@@ -29,7 +30,9 @@ foreach ($data as $kd_kerusakan => $item) {
     foreach ($nm_gjl as $gejala) {
         echo "<li>$gejala</li>";
     }
-    echo "</ul></td>";
+    echo "</ul></td>
+    <td data-label='Solusi'>" . $item[0]['solusi'] . "</td>
+    </tr>";
     $no++;
 }
 echo "</tbody></table>";
