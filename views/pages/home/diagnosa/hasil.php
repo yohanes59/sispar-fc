@@ -1,6 +1,4 @@
-<?php
-if (isset($input_gejala)) :
-?>
+<?php if (isset($_GET['kode'])) : ?>
     <div class="aksi-button">
         <a href="?page=<?= HOME_URL ?>&sub=<?= DIAGNOSA_URL ?>">
             <button class="btn"><i class="fas fa-chevron-double-left"></i> Kembali</button>
@@ -68,22 +66,21 @@ if (isset($input_gejala)) :
                             ?>
                         </th>
                     </tr>
-                    <?php if($data_hasil['solusi'] != "-") :?>
-                    <tr>
-                        <th class="left" colspan="2">
-                            <p>Solusi atas kerusakan anda adalah :</p>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="left" colspan="2">
-                            <p><?= $data_hasil['solusi']; ?></p>
-                        </th>
-                    </tr>
+                    <?php if ($data_hasil['solusi'] != "-") : ?>
+                        <tr>
+                            <th class="left" colspan="2">
+                                <p>Solusi atas kerusakan anda adalah :</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="left" colspan="2">
+                                <p><?= $data_hasil['solusi']; ?></p>
+                            </th>
+                        </tr>
                     <?php endif; ?>
                 </table>
             </div>
 
         </div>
     </div>
-
 <?php endif; ?>

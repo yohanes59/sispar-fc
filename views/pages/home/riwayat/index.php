@@ -18,18 +18,20 @@
     <tbody>
         <?php
         $no = 1;
-        foreach ($data_riwayat as $item) :
+        if (isset($data_riwayat)) :
+            foreach ($data_riwayat as $item) :
         ?>
-            <tr>
-                <td data-label="No."><?= $no; ?></td>
-                <td data-label="Kode Diagnosa"><?= $item['kode_diagnosa']; ?></td>
-                <td data-label="Tanggal"><?= date('d-m-Y - \J\a\m: H:i', strtotime($item['created_at'])); ?></td>
-                <td data-label="Kode Diagnosa"><?= $item['username']; ?></td>
-                <td data-label="Kode Diagnosa"><?= ($item['nama_kerusakan'] == "-") ? "Tidak Teridentifikasi" : $item['nama_kerusakan']; ?></td>
-            </tr>
+                <tr>
+                    <td data-label="No."><?= $no; ?></td>
+                    <td data-label="Kode Diagnosa"><?= $item['kode_diagnosa']; ?></td>
+                    <td data-label="Tanggal"><?= date('d-m-Y - \J\a\m: H:i', strtotime($item['created_at'])); ?></td>
+                    <td data-label="Kode Diagnosa"><?= $item['username']; ?></td>
+                    <td data-label="Kode Diagnosa"><?= ($item['nama_kerusakan'] == "-") ? "Tidak Teridentifikasi" : $item['nama_kerusakan']; ?></td>
+                </tr>
         <?php
-            $no++;
-        endforeach;
+                $no++;
+            endforeach;
+        endif;
         ?>
     </tbody>
 </table>

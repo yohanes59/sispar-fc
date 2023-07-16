@@ -114,6 +114,7 @@ class diagnosaController extends controller
         // proses insert ke tabel hasil
         $kode = $this->model->cariCode($data_kode_diagnosa);
         $kode = $this->model->fetch($kode);
+        $kd = $kode["MAX(kode_diagnosa)"];
         $nama = $this->kModel->select($hasil);
         $nama = $this->kModel->fetch($nama);
 
@@ -142,7 +143,7 @@ class diagnosaController extends controller
         if ($this->validate_input($kode_gejala) && $kode_gejala !== null) {
             $insertHasil = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan, $solusi);
             if ($insertHasil) {
-                header("Location: ?page=home&sub=hasil");
+                header("Location: ?page=home&sub=hasil&kode=$kd");
                 exit();
             }
         }

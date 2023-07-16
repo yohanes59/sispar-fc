@@ -10,7 +10,7 @@ class hasilController extends controller
         $this->model = new hasilModel();
     }
 
-    public function index()
+    public function index($kode)
     {
         $data_hasil = $this->model->selectLastData();
         $data_hasil = $this->model->fetch($data_hasil);

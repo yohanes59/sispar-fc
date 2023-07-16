@@ -75,5 +75,5 @@ if ($sub == WELCOME_URL) {
         $diagnosa->process();
     }
 } elseif ($sub == HASIL_URL) {
-    $hasil->index();
+    $hasil->index($kode);
 }
