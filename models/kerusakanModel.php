@@ -19,15 +19,15 @@ class kerusakanModel extends model
 		return $this->execute($query);
 	}
 
-	public function insert($kode, $nama)
+	public function insert($kode, $nama, $solusi)
 	{
-		$query = "INSERT INTO kerusakan(kode, nama, created_at, updated_at) VALUES ('$kode', '$nama', NOW(), NOW())";
+		$query = "INSERT INTO kerusakan(kode, nama, solusi, created_at, updated_at) VALUES ('$kode', '$nama', '$solusi', NOW(), NOW())";
 		return $this->execute($query);
 	}
 
-	public function update($kode, $nama)
+	public function update($kode, $nama, $solusi)
 	{
-		$query = "UPDATE kerusakan SET nama='$nama' WHERE kode='$kode'";
+		$query = "UPDATE kerusakan SET nama='$nama', solusi='$solusi' WHERE kode='$kode'";
 		return $this->execute($query);
 	}
 

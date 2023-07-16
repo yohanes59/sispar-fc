@@ -13,6 +13,14 @@
                 <input type="text" id="kerusakan" name="nama" placeholder="Nama Kerusakan..">
             </div>
         </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="solusi">Solusi</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="solusi" name="solusi" placeholder="Solusi..">
+            </div>
+        </div>
 
         <div class="row">
             <button value="Simpan" name="simpan" class="btn-submit">Submit</button>

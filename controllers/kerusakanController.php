@@ -50,10 +50,11 @@ class kerusakanController extends controller
     public function insert()
     {
         $nama = @$_POST['nama'];
+        $solusi = @$_POST['solusi'];
         $kode = $this->generate_code();
 
         if ($this->validate_name($nama)) {
-            $insert = $this->model->insert($kode, $nama);
+            $insert = $this->model->insert($kode, $nama, $solusi);
             if ($insert) {
                 echo "<script type='text/javascript'>
                     Swal.fire({
@@ -79,9 +80,10 @@ class kerusakanController extends controller
     {
         $kode = $_GET['kode'];
         $nama = @$_POST['nama'];
+        $solusi = @$_POST['solusi'];
 
         if ($this->validate_name($nama)) {
-            $update = $this->model->update($kode, $nama);
+            $update = $this->model->update($kode, $nama, $solusi);
             if ($update) {
                 echo "<script type='text/javascript'>
                     Swal.fire({
