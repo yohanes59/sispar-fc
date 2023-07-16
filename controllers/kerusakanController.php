@@ -47,13 +47,23 @@ class kerusakanController extends controller
         }
     }
 
+    function validate_solusi($solusi)
+    {
+        if (empty(trim($solusi))) {
+            $this->sweetalert('error', 'input required!', 'Solusi tidak boleh kosong');
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public function insert()
     {
         $nama = @$_POST['nama'];
         $solusi = @$_POST['solusi'];
         $kode = $this->generate_code();
 
-        if ($this->validate_name($nama)) {
+        if ($this->validate_name($nama) && $this->validate_solusi($solusi)) {
             $insert = $this->model->insert($kode, $nama, $solusi);
             if ($insert) {
                 echo "<script type='text/javascript'>
@@ -82,7 +92,7 @@ class kerusakanController extends controller
         $nama = @$_POST['nama'];
         $solusi = @$_POST['solusi'];
 
-        if ($this->validate_name($nama)) {
+        if ($this->validate_name($nama) && $this->validate_solusi($solusi)) {
             $update = $this->model->update($kode, $nama, $solusi);
             if ($update) {
                 echo "<script type='text/javascript'>
