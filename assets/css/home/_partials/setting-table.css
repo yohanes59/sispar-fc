@@ -1,0 +1,15 @@
+th:first-child {
+    width: 60px;
+}
+
+th:nth-child(2) {
+    width: 150px;
+}
+
+th:last-child {
+    width: 200px;
+}
+
+td:first-child {
+    text-align: center;
+}

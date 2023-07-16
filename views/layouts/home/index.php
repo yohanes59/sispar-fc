@@ -41,6 +41,11 @@ $user->guest();
 
     <!-- style -->
     <link rel="stylesheet" href="../../../assets/css/home/style.css">
+    <?php if ($_SESSION['role'] == 'Admin') : ?>
+        <link rel="stylesheet" href="../../../assets/css/home/_partials/setting-table.css">
+    <?php else : ?>
+        <link rel="stylesheet" href="../../../assets/css/home/_partials/hasil.css">
+    <?php endif; ?>
 
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
