@@ -12,32 +12,32 @@ $data = [
     [
         'kode' => 'KK-01',
         'nama' => 'Tension kendor',
-        'solusi' => 'Solusi 1',
+        'solusi' => 'Atur tension ke angka normal, yaitu antara 3-5',
     ],
     [
         'kode' => 'KK-02',
         'nama' => 'Tension kencang',
-        'solusi' => 'Solusi 2',
+        'solusi' => 'Atur tension ke angka normal, yaitu antara 3-5',
     ],
     [
         'kode' => 'KK-03',
         'nama' => 'Jarum bengkok dan terbalik',
-        'solusi' => 'Solusi 3',
+        'solusi' => 'Ganti jarum dengan yang baru dan bagus',
     ],
     [
         'kode' => 'KK-04',
         'nama' => 'Jarum tumpul',
-        'solusi' => 'Solusi 4',
+        'solusi' => 'Ganti jarum dengan yang baru dan bagus',
     ],
     [
         'kode' => 'KK-05',
         'nama' => 'Gigi tumpul',
-        'solusi' => 'Solusi 5',
+        'solusi' => 'Ganti gigi dan pastikan tidak ada yang terlepas atau longgar',
     ],
     [
         'kode' => 'KK-06',
         'nama' => 'Gigi rusak',
-        'solusi' => 'Solusi 6',
+        'solusi' => 'Bersihkan dari debu dan percahan kain, jika masih error ganti gigi',
     ],
 ];
 
