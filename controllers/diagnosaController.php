@@ -121,10 +121,15 @@ class diagnosaController extends controller
         // inisiasi variabel
         $kode_diagnosa = implode(", ", $kode);
         $kode_kerusakan = $hasil;
+        $solusi = $this->model->selectSolusiByCode($kode_kerusakan);
+        $solusi = $this->model->fetch($solusi);
+
         if ($kode_kerusakan !== "-") {
             $nama_kerusakan = $nama['nama'];
+            $solusi = $solusi['solusi'];
         } else {
             $nama_kerusakan = "-";
+            $solusi = "-";
         }
 
         // trigger insert hasil
@@ -135,7 +140,7 @@ class diagnosaController extends controller
         }
 
         if ($this->validate_input($kode_gejala) && $kode_gejala !== null) {
-            $insertHasil = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan);
+            $insertHasil = $this->hModel->insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan, $solusi);
             if ($insertHasil) {
                 header("Location: ?page=home&sub=hasil");
                 exit();

@@ -21,4 +21,10 @@ class diagnosaModel extends model
         $query = "SELECT kode_gejala FROM diagnosa WHERE kode_diagnosa='$kd'";
         return $this->execute($query);
     }
+
+    public function selectSolusiByCode($kd)
+    {
+        $query = "SELECT solusi FROM kerusakan WHERE kode='$kd'";
+        return $this->execute($query);
+    }
 }

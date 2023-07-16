@@ -1,15 +1,15 @@
 <?php
 class hasilModel extends model
 {
-	public function selectAll()
-	{
-		$query = "SELECT * FROM hasil";
-		return $this->execute($query);
-	}
-
-    public function insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan)
+    public function selectAll()
     {
-        $query = "INSERT INTO hasil(kode_diagnosa, kode_kerusakan, nama_kerusakan, created_at, updated_at) VALUES ('$kode_diagnosa', '$kode_kerusakan', '$nama_kerusakan', NOW(), NOW())";
+        $query = "SELECT * FROM hasil";
+        return $this->execute($query);
+    }
+
+    public function insert($kode_diagnosa, $kode_kerusakan, $nama_kerusakan, $solusi)
+    {
+        $query = "INSERT INTO hasil(kode_diagnosa, kode_kerusakan, nama_kerusakan, solusi, created_at, updated_at) VALUES ('$kode_diagnosa', '$kode_kerusakan', '$nama_kerusakan', '$solusi', NOW(), NOW())";
         return $this->execute($query);
     }
 
@@ -30,7 +30,7 @@ class hasilModel extends model
 
     public function selectRelateGejalaByDiagnosaCode($kode)
     {
-        $query = "SELECT h.kode_diagnosa, h.kode_kerusakan, h.nama_kerusakan, p.kode_gejala, g.nama, h.created_at
+        $query = "SELECT h.kode_diagnosa, h.kode_kerusakan, h.nama_kerusakan, p.kode_gejala, g.nama, h.solusi, h.created_at
                 FROM hasil as h
                 JOIN pengetahuan as p ON h.kode_kerusakan = p.kode_kerusakan
                 JOIN gejala as g ON p.kode_gejala = g.kode

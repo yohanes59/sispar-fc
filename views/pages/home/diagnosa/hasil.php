@@ -68,6 +68,18 @@ if (isset($input_gejala)) :
                             ?>
                         </th>
                     </tr>
+                    <?php if($data_hasil['solusi'] != "-") :?>
+                    <tr>
+                        <th class="left" colspan="2">
+                            <p>Solusi atas kerusakan anda adalah :</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="left" colspan="2">
+                            <p><?= $data_hasil['solusi']; ?></p>
+                        </th>
+                    </tr>
+                    <?php endif; ?>
                 </table>
             </div>
 
