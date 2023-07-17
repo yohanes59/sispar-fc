@@ -40,11 +40,11 @@ $user->guest();
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
 
     <!-- style -->
-    <link rel="stylesheet" href="../../../assets/css/home/style.css">
+    <link rel="stylesheet" href="assets/css/home/style.css">
     <?php if ($_SESSION['role'] == 'Admin') : ?>
-        <link rel="stylesheet" href="../../../assets/css/home/_partials/setting-table.css">
+        <link rel="stylesheet" href="assets/css/home/_partials/setting-table.css">
     <?php else : ?>
-        <link rel="stylesheet" href="../../../assets/css/home/_partials/hasil.css">
+        <link rel="stylesheet" href="assets/css/home/_partials/hasil.css">
     <?php endif; ?>
 
     <!-- Sweet Alert -->
@@ -66,7 +66,7 @@ $user->guest();
         ?>
     </main>
 
-    <script src="../../../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
