@@ -1,5 +1,5 @@
 <?php 
-define('APP_NAME', 'Sistem Pakar Forward Chaining');
+define('APP_NAME', 'Sistem Pakar Kerusakan Mesin Jahit Forward Chaining');
 
 define('REGISTER_URL', 'register');
 define('HOME_URL', 'home');
