@@ -32,6 +32,10 @@
   margin: 10px 5px;
 }
 
+#kop-surat img {
+  display: none;
+}
+
 /*responsive*/
 
 @media(max-width: 500px) {
@@ -71,12 +75,18 @@
 }
 
 @media print {
+  .content {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .content-header::before {
     content: "Laporan ";
   }
 
   .content-header {
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 10px;
     font-size: 1.5rem;
     font-weight: 300;
@@ -94,5 +104,32 @@
   .table th {
     border: 1px solid #000;
     color: #000;
+  }
+
+  #kop-surat {
+    display: flex;
+  }
+
+  #kop-surat img {
+    display: inline;
+  }
+
+  #kop-surat .isi {
+    flex: 2;
+    text-align: center;
+  }
+
+  #kop-surat .isi .company {
+    font-size: 37px;
+    color: orange;
+  }
+
+  #kop-surat .isi span {
+    color: blue;
+  }
+
+  #tanda-tangan p,
+  #tanda-tangan span {
+    float: right;
   }
 }
