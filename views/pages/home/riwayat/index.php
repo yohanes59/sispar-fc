@@ -1,7 +1,12 @@
+<div id="kop-surat">
+    <img id="logo" src="assets/img/logo-p.png">
+</div>
+<div id="garis"></div>
+
 <h1 class="content-header">Data Riwayat Diagnosa User</h1>
 <hr class="line">
 <div class="aksi-button">
-    <a href="" onclick="window.print();">
+    <a href="" onclick="appendSignature();">
         <button class="btn cetak"><i class="fas fa-file"></i> Cetak Laporan</button>
     </a>
 </div>
@@ -35,3 +40,5 @@
         ?>
     </tbody>
 </table>
+
+<div id="tanda-tangan"></div>

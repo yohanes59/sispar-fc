@@ -1,10 +1,15 @@
+<div id="kop-surat">
+    <img id="logo" src="assets/img/logo-p.png">
+</div>
+<div id="garis"></div>
+
 <h1 class="content-header">Data Gejala</h1>
 <hr class="line">
 <div class="aksi-button">
     <a href="?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=tambah">
         <button class="btn tambah"><i class="fas fa-plus"></i> Tambah Data</button>
     </a>
-    <a href="" onclick="window.print();">
+    <a href="" onclick="appendSignature();">
         <button class="btn"><i class="fas fa-file"></i> Cetak Laporan</button>
     </a>
 </div>
@@ -48,33 +53,4 @@
     </tbody>
 </table>
 
-<script>
-    // Function to append the script after </main>
-    function appendScript() {
-        let script = document.createElement('script');
-        script.innerHTML = `
-            function confirmDeleteGejala(event, kode) {
-                event.preventDefault();
-
-                Swal.fire({
-                    title: 'Konfirmasi',
-                    text: 'Yakin ingin menghapus data ini?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'Ya, Hapus!',
-                    cancelButtonText: 'Batal'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        let deleteUrl = '?page=<?= HOME_URL ?>&sub=<?= GEJALA_URL ?>&act=delete&kode=' + kode;
-                        window.location.href = deleteUrl;
-                    }
-                });
-            }
-        `;
-
-        var mainElement = document.querySelector('main');
-        mainElement.parentNode.insertBefore(script, mainElement.nextSibling);
-    }
-
-    appendScript();
-</script>
+<div id="tanda-tangan"></div>
