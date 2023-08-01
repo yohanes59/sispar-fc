@@ -47,12 +47,24 @@ $user->guest();
         <link rel="stylesheet" href="assets/css/home/_partials/hasil.css">
     <?php endif; ?>
 
+    <script src="assets/js/signature.js"></script>
+
+    <?php
+    $sub = @$_GET['sub'];
+
+    if ($sub == GEJALA_URL) {
+        echo '<script>' . GEJALA_SCRIPT . '</script>';
+    } elseif ($sub == KERUSAKAN_URL) {
+        echo '<script>' . KERUSAKAN_SCRIPT . '</script>';
+    } elseif ($sub == PENGETAHUAN_URL) {
+        echo '<script>' . PENGETAHUAN_SCRIPT . '</script>';
+    }
+    ?>
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-
     <main>
         <?php
         include 'sidebar.php';
